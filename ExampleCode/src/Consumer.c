@@ -3,7 +3,8 @@
 #include <errno.h>
 #include <string.h>
 #include <zmq.h>
-#include <json-c/json.h>
+#include "../lib/json-c/0.15/include/json-c/json.h"
+
 
 struct json_object* load_system_parameters(const char*);
 const char* get_addr_from_para(struct json_object*, const char*);

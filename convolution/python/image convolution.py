@@ -4,7 +4,7 @@ import imutils
 import sys
 
 # cv2.IMREAD_COLOR為imread的預設值，此參數亦可不加。
-imageName = "hsuan.jpg"
+imageName = "../hsuan.jpg"
 image = cv2.imread(imageName, cv2.IMREAD_COLOR)
 #若無指定圖片則結束程式。
 if image is None:

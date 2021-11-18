@@ -1,0 +1,10 @@
+{
+    "title":"testfile",
+    "isvalid": true,
+    "number": 100,
+    "double": 4.2332,
+    "array": ["first","second","third"],
+    "others": {
+        "title": "another"
+    }
+}

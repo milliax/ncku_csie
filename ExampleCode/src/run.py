@@ -2,12 +2,13 @@ import os
 import subprocess
 import json
 
+""" Reading environment variables """
 with open("./SystemParameters.json", "r") as f:
     para = json.load(f)
 
 """ compile consumer """
 s = os.system("make")
-assert s == 0
+assert s == 0, "無法編譯"
 
 """ system """
 p_judg = subprocess.Popen(["python3", ".judge.py"])
