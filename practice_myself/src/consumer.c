@@ -74,8 +74,11 @@ int main(void){
     while(1){
         struct json_object* work;
         void* buffer = (void*) malloc(1000 * sizeof(char));
-
+        printf("[Consumer] waiting for new work\n");
+        
+        size_t s = zmq_recv(socket_producer,buffer,1000,0);
         work = Work((char*) buffer);
+
         const char* msg = json_object_to_json_string(work);
         zmq_send(socket_collector,msg,strlen(msg),0);
         free(buffer);
