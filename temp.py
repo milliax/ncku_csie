@@ -1,15 +1,24 @@
-"""a,b,c = list(map(lambda x:int(x)**2,input().split()))
+import time
+times = int(10E7)
+print(times)
+array1 = [str(i) for i in range(times)]
+array2 = [str(i) for i in range(times)]
 
-print(a,b,c)
+print("initialized")
 
-"""
-"""
-print(list(range(5)))
-"""
+""" section 1 """
 
-import cv2
-import numpy as np
+print("mapping out the data")
+start_time = time.time()
+array1 = list(map(int,array1))
+end_time = time.time()
 
-img = cv2.imread("example.jpg")
+print("Processed time is {}".format(end_time-start_time))
 
-cv2.imshow(img)
+""" section 2 """
+print("for the data")
+start_time = time.time()
+array2 = [int(i) for i in array2]
+end_time = time.time()
+
+print("Processed time is {}".format(end_time-start_time))
